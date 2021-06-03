@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How create a jquery plugin</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        img {
+            width: 80%;
+            max-width: 80%;
+            display: block;
+            transition: all .5s ease-in-out;
+        }
+        
+        @keyframes jackInTheBox {
+            from {
+                opacity: 0;
+                -webkit-transform: scale(0.1) rotate(30deg);
+                transform: scale(0.1) rotate(30deg);
+                -webkit-transform-origin: center bottom;
+                transform-origin: center bottom;
+            }
+            50% {
+                -webkit-transform: rotate(-10deg);
+                transform: rotate(-10deg);
+            }
+            70% {
+                -webkit-transform: rotate(3deg);
+                transform: rotate(3deg);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        .jackInTheBox {
+            -webkit-animation-name: jackInTheBox;
+            animation-name: jackInTheBox;
+        }
+        
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        
+        .jackInTheBox {
+            -webkit-animation-name: jackInTheBox;
+            animation-name: jackInTheBox;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="jumbotron my-3 ">
+            <header>
+                <h1>Welcome to Image Shuffle!</h1>
+            </header>
+        </section>
+
+        <section class="gallary bg-light ">
+            <figure>
+                <img src="images/p1.png" alt="" width="150">
+            </figure>
+
+            <figure>
+                <img src="images/p2.jpg" alt="" width="150">
+            </figure>
+
+            <figure>
+                <img src="images/p3.jpg" alt="" width="150">
+            </figure>
+
+            <figure>
+                <img src="images/p4.jpg" alt="" width="150">
+            </figure>
+            <figure>
+                <img src="images/p5.jpg" alt="" width="150">
+            </figure>
+            <figure>
+                <img src="images/p6.jpg" alt="" width="150">
+            </figure>
+        </section>
+
+
+
+    </div>
+
+
+
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery-codeparl-image-shuffle.js"></script>
+    <script>
+        $('.gallary').codeparlImageShuffle();
+    </script>
+</body>
+
+</html>
